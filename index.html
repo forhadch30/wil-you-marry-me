@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamicle functional programming</title>
+
+    <!-- Tailwind CSS Like -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- boxicons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- font awesome Link -->
+    <script src="https://kit.fontawesome.com/d7b7563d24.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- <header> -->
+    <!-- <section>
+            <div>
+                <h1 id="secret-Info" class="text-3xl font-bold">My Secret Info</h1>
+                <input type="email" placeholder="Please Type delete" class="border-2" name="" id="delete-type">
+                <button id="delete-btn" disabled  class="hover:bg-teal-700 rounded border hover:text-white py-1 px-5">Delete</button>
+            </div>
+        </section> -->
+    <!-- </header> -->
+    <header>
+        <section class="bg-[#F9F6E2] lg:py-10">
+            <div class="flex items-center justify-center">
+                <div>
+                    <h2 class="lg:text-3xl font-medium text-center">---SALE FEVER---</h2>
+                    <p class="lg:text-4xl lg:w-[370px] font-bold mt-10">Purchase TK 200 or above & get <span
+                            class="text-[#E527B2]">20% off</span></p>
+                    <div class="flex items-center mt-5 gap-3">
+                        <p class="text-xl font-bold">Use Promo Code</p>
+                        <button id="sell-btn" disabled class="text-white bg-[#E527B2] py-1 rounded px-4">SELL200</button>
+                    </div>
+                </div>
+                <img class="lg:w-[400px]" src="image/Summer 1.png" alt="">
+            </div>
+        </section>
+    </header>
+    <main class="bg-[#F8F8F8]">
+        <section class="max-w-5xl mx-auto lg:py-20">
+            <div>
+                <h2 class="text-4xl font-semibold">Kitchenware</h2>
+                <div class="lg:mt-10 flex gap-3">
+                    <!-- CARD ONE  -->
+                    <!-- id="unpkg-kitchenware" -->
+                    <div onclick="calculator()" class="card w-64 bg-base-100 shadow-xl border">
+                        <div>
+                            <img src="image/prod1.png" alt="Shoes"
+                                class="rounded-xl mt-2 py-6 px-[26%] mx-auto bg-[#1111110D]" />
+                        </div>
+                        <div class="card-body items-center text-center">
+                            <div>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                            </div>
+                            <h2 class="card-title">K. Accessories</h2>
+                            <p>
+                                <span class="text-[#11111180]"> <span id="span-Price">39.00</span> TK</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- CARD TWO  -->
+                    <div id="unpkgTwo" class="card w-64 bg-base-100 shadow-xl border">
+                        <div>
+                            <img src="image/prod2.png" alt="Shoes"
+                                class="rounded-xl mt-2  py-5 px-[18%] mx-auto bg-[#1111110D]" />
+                        </div>
+                        <div class="card-body items-center text-center">
+                            <div>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                            </div>
+                            <h2 class="card-title">K. Accessories</h2>
+                            <p>
+                                <span class="text-[#11111180]"><span id="price-2">25.00</span> TK</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- CARD THREE  -->
+                    <div class="card w-64 bg-base-100 shadow-xl border">
+                        <div>
+                            <img src="image/prod3.png" alt="Shoes"
+                                class="rounded-xl mt-2 py-6 px-[19%] mx-auto bg-[#1111110D]" />
+                        </div>
+                        <div class="card-body items-center text-center">
+                            <div>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                            </div>
+                            <h2 class="card-title">Home Cooker</h2>
+                            <p>
+                                <span class="text-[#11111180]">49.00 TK</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Have coupon? -->
+                    <div class="lg:w-[230px] lg:pl-4 relative">
+                        <div class="border rounded bg-white pl-4 py-4">
+                            <h2 class="text-xl">Have coupon?</h2>
+                            <input type="email" class="border py-1 lg:w-[120px] mt-2 px-2 rounded"
+                                placeholder="Coupon code" name="" id="">
+                            <button
+                                class="bg-[#E527B2] -ml-3 h-[34px] text-center text-white py-1 px-3 rounded-e">Apply</button>
+                        </div>
+                        <div class="lg:w-[215px] border lg:h-[280px] mt-4 rounded bg-white py-2">
+                            <div class="text-center uppercase underline font-bold">Kitchenware</div>
+                            <hr class="mt-24">
+                            <div class="p-2" id="Kitchenware-calculate">
+
+                            </div>
+                        </div>
+                        <button class="bg-[#E527B2] absolute right-6 top-[96%] py-1 px-7 rounded-sm text-white">Make
+                            Purchase</button>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD Two  -->
+            <div>
+                <h2 class="text-4xl font-semibold mt-7">Sportswear</h2>
+                <div class="lg:mt-10 flex gap-3">
+                    <!-- CARD ONE  -->
+                    <div class="card w-64 bg-base-100 shadow-xl border">
+                        <div>
+                            <img src="image/prod4.png" alt="Shoes"
+                                class="rounded-xl mt-2 py-6 px-[16%] mx-auto bg-[#1111110D]" />
+                        </div>
+                        <div class="card-body items-center text-center">
+                            <div>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                            </div>
+                            <h2 class="card-title">K. Accessories</h2>
+                            <p>
+                                <span class="text-[#11111180]"><span id="price-2">39.00</span> TK</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- CARD TWO  -->
+                    <div class="card w-64 bg-base-100 shadow-xl border">
+                        <div>
+                            <img src="image/prod5.png" alt="Shoes"
+                                class="rounded-xl mt-2  py-4 px-[24%] mx-auto bg-[#1111110D]" />
+                        </div>
+                        <div class="card-body items-center text-center">
+                            <div>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                            </div>
+                            <h2 class="card-title">K. Accessories</h2>
+                            <p>
+                                <span class="text-[#11111180]">25.00 TK</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- CARD THREE  -->
+                    <div class="card w-64 bg-base-100 shadow-xl border">
+                        <div>
+                            <img src="image/prod6.png" alt="Shoes"
+                                class="rounded-xl mt-2 py-4 px-[19%] mx-auto bg-[#1111110D]" />
+                        </div>
+                        <div class="card-body items-center text-center">
+                            <div>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                            </div>
+                            <h2 class="card-title">Home Cooker</h2>
+                            <p>
+                                <span class="text-[#11111180]">49.00 TK</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD Three -->
+            <div>
+                <h2 class="text-4xl font-semibold mt-7">Furniture</h2>
+                <div class="lg:mt-10 flex gap-3">
+                    <!-- CARD ONE  -->
+                    <div class="card w-64 bg-base-100 shadow-xl border">
+                        <div>
+                            <img src="image/prod7.png" alt="Shoes"
+                                class="rounded-xl mt-2 py-4 px-[19%] mx-auto bg-[#1111110D]" />
+                        </div>
+                        <div class="card-body items-center text-center">
+                            <div>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                            </div>
+                            <h2 class="card-title">K. Accessories</h2>
+                            <p>
+                                <span class="text-[#11111180]">39.00 TK</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- CARD TWO  -->
+                    <div class="card w-64 bg-base-100 shadow-xl border">
+                        <div>
+                            <img src="image/prod8.png" alt="Shoes"
+                                class="rounded-xl mt-2  py-5 px-[24%] mx-auto bg-[#1111110D]" />
+                        </div>
+                        <div class="card-body items-center text-center">
+                            <div>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                            </div>
+                            <h2 class="card-title">K. Accessories</h2>
+                            <p>
+                                <span class="text-[#11111180]">25.00 TK</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- CARD THREE  -->
+                    <div class="card w-64 bg-base-100 shadow-xl border">
+                        <div>
+                            <img src="image/prod9.png" alt="Shoes"
+                                class="rounded-xl mt-2 py-6 px-[16%] mx-auto bg-[#1111110D]" />
+                        </div>
+                        <div class="card-body items-center text-center">
+                            <div>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa fa-star text-[#FFC107]" aria-hidden="true"></i>
+                                <i class="fa-regular text-[#FFC107] fa-star"></i>
+                            </div>
+                            <h2 class="card-title">Home Cooker</h2>
+                            <p>
+                                <span class="text-[#11111180]">49.00 TK</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/delete.js"></script>
+</body>
+
+</html>
